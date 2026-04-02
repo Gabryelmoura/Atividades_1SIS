@@ -1,0 +1,42 @@
+<!-- 
+Nome: Gabryel da Silva Moura.
+RA: 03261048.
+Turma: 1SIS.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farol</title>
+</head>
+
+<body>
+    <!-- Botão Pare -->
+    <button onclick="pare()">Pare</button>
+    <div id="msg_Pare"></div>
+    
+    <!-- Botão Pense -->
+    <button onclick="pense()">Pense</button>
+    <div id="msg_Pense"></div>
+    
+    <!-- Botão Siga -->
+    <button onclick="siga()">Siga</button>
+    <div id="msg_Siga"></div>
+</body>
+</html>
+
+<script>
+    function pare(){
+        document.getElementById('msg_Pare').innerHTML="Pare e Aguarde!";
+    }
+
+    function pense(){
+        document.getElementById('msg_Pense').innerHTML="Pense se pode seguir ou se deve parar!";
+    }
+
+    function siga(){
+        document.getElementById('msg_Siga').innerHTML="Pode seguir adiante";
+    }
+</script>
