@@ -1,0 +1,37 @@
+<!-- 
+Nome: Gabryel da Silva Moura.
+RA: 03261048.
+Turma: 1SIS.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futebol</title>
+</head>
+
+<body>
+    <h3>Nome do Time: </h3>
+    <input type="text" id="ipt_Nome">
+
+    <h3>Quantidade de Titulos: </h3>
+    <input type="text" id="ipt_Quantidade">
+    
+    <button onclick="informacoes()">Amo meu time</button>
+</body>
+</html>
+
+<script>
+    function informacoes(){
+        let nome = ipt_Nome.value;
+        let quantidade = Number(ipt_Quantidade.value);
+        
+        alert("O time "+ nome + "tem " + quantidade + " títulos")
+        
+        // Comando oara limpar o Input
+        ipt_Nome.value = "";
+        ipt_Quantidade.value = "";
+    }
+</script>
