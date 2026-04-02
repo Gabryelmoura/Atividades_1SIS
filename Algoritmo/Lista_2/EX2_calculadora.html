@@ -1,0 +1,36 @@
+<!-- 
+Nome: Gabryel da Silva Moura.
+RA: 03261048.
+Turma: 1SIS.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <h3>Digite seu Peso: </h3>
+    <input id="ipt_Peso" type="number">
+
+    <h3>Digite sua Altura: </h3>
+    <input id="ipt_Altura" type="number">
+    <button onclick="cumprimento()">Fale Comigo</button>
+</body>
+</html>
+
+<script>
+    function cumprimento(){
+        let peso = Number(ipt_Peso.value);
+        let altura = Number(ipt_Altura.value);
+        
+        alert("Você pesa " + peso + "kg e tem " + altura + "m de altura");
+    
+        // Comando para limpar o Input
+        ipt_Peso.value = "";
+        ipt_Altura.value = "";
+    }
+</script>
