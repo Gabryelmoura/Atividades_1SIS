@@ -1,0 +1,38 @@
+<!-- 
+Nome: Gabryel da Silva Moura.
+RA: 03261048.
+Turma: 1SIS.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endereço</title>
+</head>
+
+<body>
+    <h3>Digite o seu nome da Rua/Avenida/Vila: </h3>
+    <input type="text" id="ipt_Endereco">
+
+    <h3>Digite o seu Numero da Casa: </h3>
+    <input type="number" id="ipt_Numero">
+    
+    <button onclick="CEP()">Onde eu Moro</button>
+</body>
+</html>
+
+<script>
+    function CEP(){
+        let endereco = ipt_Endereco.value;
+        let numCasa = Number(ipt_Numero.value);
+        
+        alert("Seu logradouro é " + endereco);
+        alert("O número do seu logradouro é " + numCasa);
+        
+        // Comando usado para limpar o Input
+        ipt_Endereco.value = "";
+        ipt_Numero.value = "";
+    }
+</script>
