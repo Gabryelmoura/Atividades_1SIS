@@ -1,0 +1,38 @@
+<!-- 
+Nome: Gabryel da Silva Moura
+RA: 03261048.
+Turma: 1SIS
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saldo Bancário</title>
+</head>
+
+<body>
+    <h2>Conta Bancária</h2>
+
+    <button type="submit" onclick="receber()">Receber 100</button>
+    <button type="submit" onclick="pagar()">Pagar 50</button> <br>
+    <div id="msg-Res"></div>
+</body>
+</html>
+
+<script>
+    let saldo = 0;
+
+    function receber(){
+        saldo += 100;
+        document.getElementById('msg-Res').innerHTML = 
+        `Transferência de R$100 recebida! Saldo atual: R$${saldo}`;
+    }
+
+    function pagar(){
+        saldo -= 50;
+        document.getElementById('msg-Res').innerHTML = 
+        `Pagamento de R$50 efetuado! Saldo atual: R$${saldo}`;
+    }
+</script>
