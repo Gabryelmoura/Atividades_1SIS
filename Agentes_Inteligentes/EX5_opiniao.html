@@ -1,0 +1,40 @@
+<!-- 
+Nome: Gabryel da Silva Moura.
+RA: 03261048.
+Turma: 1SIS.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opinião</title>
+</head>
+
+<body>
+    <h3>Digite a sua nota da Escola: </h3>
+    <input type="number" id="ipt_Nota">
+
+    <button onclick="opi_Avo()">Opinião da Avó</button>
+    <div id="div_Avo"></div>
+
+    <button onclick="opi_Mae()">Opinião da Mãe</button>
+    <div id="div_Mae"></div>
+</body>
+</html>
+
+<script>
+    function opi_Avo(){
+        let nota = Number(ipt_Nota.value);
+        document.getElementById('div_Avo').innerHTML="Muito bem, que neto inteligente, porque tirou "+ nota;
+   }
+
+    function opi_Mae(){
+        let nota = Number(ipt_Nota.value);
+        document.getElementById('div_Mae').innerHTML="Não fez mais que tua obrigação com essa nota "+ nota;
+    
+        // Comando usado para limpar o Input
+        ipt_Nota.value = "";
+    }
+</script>
