@@ -1,0 +1,36 @@
+<!-- 
+Nome: Gabryel da Silva Moura;
+RA: 03261048.
+Turma: 1SIS. 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conforto Térmico</title>
+</head>
+
+<body>
+    <h2>Informe a Temperatura Atual: </h2>
+    <input type="text" id="ipt_Temp">
+    
+    <button onclick="verificar()">Ver situação</button>
+    <div id="msg_Res"></div>
+</body>
+</html>
+
+<script>
+    function verificar(){
+        let temp = Number(ipt_Temp.value);
+
+        if(temp > 21 && temp < 24){
+            msg_Res.innerHTML = `Temperatura confortável :D`;
+        } 
+        
+        else{
+            alert(`Temperatura DESCONFORTÁVEL :C`);
+        }
+    }
+</script>
