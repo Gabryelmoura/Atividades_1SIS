@@ -1,0 +1,37 @@
+<!-- 
+Nome: Gabryel da Silva Moura.
+RA: 03261048.
+Turma: 1SIS.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima</title>
+</head>
+
+<body>
+    <h3>Digite a Temperatura atual: </h3>
+    <input type="number" id="ipt_Temp">
+
+    <h3>Digite a Condição do Tempo Atual: </h3>
+    <input type="text" id="ipt_Cond">
+    
+    <button onclick="clima()">Ver Dica</button>
+</body>
+</html>
+
+<script>
+    function clima(){
+        let tempo = Number(ipt_Temp.value);
+        let condicao = ipt_Cond.value;
+        
+        alert("Está fazendo " + tempo + " graus e o dia está " + condicao);
+
+        // Comando usado para limpar os Inputs
+        ipt_Temp.value = "";
+        ipt_Cond.value = "";
+    }
+</script>
