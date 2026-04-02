@@ -1,0 +1,41 @@
+<!-- 
+Nome: Gabryel da Silva Moura.
+RA: 03261048.
+Turma: 1SIS.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrida de Voltas</title>
+</head>
+
+<body>
+    <h2>Digite quantas voltas o carro dará numa corrida: </h2>
+    <input type="text" id="ipt_Voltas">
+    
+    <button onclick="voltas()">Iniciar corrida!</button>
+    <div id="msg_Res"></div>
+</body>
+</html>
+
+<script>
+    function voltas(){
+        let voltas = Number(ipt_Voltas.value);
+        let contadores = 0;
+
+        while(contadores < voltas){
+            contadores += 1;
+
+            if(contadores < voltas){
+                msg_Res.innerHTML += `Carro dando a ${contadores} volta.<br>`;
+            }
+
+            else{
+                msg_Res.innerHTML += `Corrida Finalizada!<br>`;
+            }
+        }
+    }
+</script>

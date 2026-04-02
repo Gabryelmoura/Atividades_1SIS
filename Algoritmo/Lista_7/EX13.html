@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papagaio Repetitivo</title>
+</head>
+
+<body>
+    <h2>Entre com o Número de Repetição: </h2>
+    <input type="text" id="ipt_Numero">
+    
+    <h2>Digite a Frase: </h2>
+    <input type="text" id="ipt_Frase">    
+
+    <button onclick="repeticao()">Papagaio Repetitivo</button>
+    <div id="msg_Res"></div>
+</body>
+</html>
+
+<script>
+    function repeticao(){
+        let frase  = ipt_Frase.value;
+        let numero = Number(ipt_Numero.value);
+        let cont = 0;
+        let ax_erros = false;
+        let msg = '';
+        let cont2 = 0;
+
+        if(numero <= 0 || numero > 20 || numero%1 != 0){
+            alert('Entre com um numero inteiro entre 0 e 20');
+            ax_erros = true;
+        }
+
+        if(frase.length == 0){
+            alert('Entre com uma frase para ser repetida.');
+            ax_erros = true;
+        }
+
+        if(ax_erros == false){
+            msg_Res.innerHTML = ``;
+            
+            while (cont < numero){
+                cont = cont + 1;
+                msg_Res.innerHTML += `${cont} - `;
+                cont2 = 0;
+
+                while(cont2 < cont){
+                    cont2 + cont2 + 1;
+                    msg += `${frase}` + ' ';
+                    msg_Res.innerHTML += `${msg}<br>`;
+                }  
+            }
+        }
+    }
+</script>

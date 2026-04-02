@@ -1,0 +1,54 @@
+<!-- 
+Nome: Gabryel da Silva Moura.
+RA: 03261048.
+Turma: 1SIS.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expressar Amor</title>
+</head>
+
+<body>
+    <h2>Entre com o nome do seu amor: </h2>
+    <input type="text" id="ipt_Nome">
+
+    <h2>Entre com o quanto você ama (1 - 10): </h2>
+    <input type="text" id="ipt_Vezes">
+    
+    <button onclick="expressar()">Expressar Amor</button>
+    <div id="msg_Res"></div>
+</body>
+</html>
+
+<script>
+    function expressar(){
+        let quant = ipt_Vezes.value;
+        let nome = ipt_Nome.value;
+        let cont = 0;
+        let ax_erros = "";
+
+        if(nome.length < 3){
+            ax_erros += ` Entre com um nome com pelo menos 3 caracteres. `;
+        }
+
+        if(quant < 1 || quant > 10){
+            ax_erros += ` Entre com a quantidade entre 1 e 10. `;
+        }
+
+        if(ax_erros != ''){
+            alert(ax_erros);
+        }
+
+        else{
+            while (cont < quant){
+                cont = cont + 1;
+
+                msg_Res.innerHTML += `<br> ${cont} - ${nome} eu te amo - Lembre sempre disso! `;
+            }
+        }
+    }
+</script>

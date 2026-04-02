@@ -1,0 +1,52 @@
+<!-- 
+Nome: Gabryel da Silva Moura.
+RA: 03261048.
+Turma: 1SIS.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pares no Intervalo</title>
+</head>
+
+<body>
+    <h2>Informe um intervalo entre dois numeros</h2>
+    <h3>Menor Numero: </h3>
+    <input type="text" id="ipt_Menor">
+
+    <h3>Maior Numero: </h3>
+    <input type="text" id="ipt_Maior">
+    
+    <button onclick="verificar()">S2 Pares</button>
+    <div id="msg_Res"></div>
+</body>
+</html>
+
+<script>
+    function verificar(){
+        let maior = Number(ipt_Maior.value);
+        let menor = Number(ipt_Menor.value);
+        let cont = menor;
+        
+        if(menor > maior){
+            alert("O primeiro valor deve ser menor que o segundo.")
+        }
+
+        else if(menor < 0 || maior < 0){
+            alert("Os valores devem ser positivos");
+        }
+
+        else{
+            while(cont < maior){
+                cont = 0 + 1;
+
+                if(cont%2 == 0){
+                    msg_Res.innerHTMl = `${cont}<br>`;
+                }
+            }
+        }
+    }
+</script>
