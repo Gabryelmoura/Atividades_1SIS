@@ -1,0 +1,37 @@
+<!-- 
+Nome: Gabryel da Silva Moura.
+RA: 03261048.
+Turma: 1SIS.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Local</title>
+</head>
+
+<body>
+    <h3>Digite sua Cidade Natal: </h3>
+    <input type="text" id="ipt_Cidade">
+    
+    <h3>Digite seu Ano de Nascimento: </h3>
+    <input type="number" id="ipt_Ano">
+    <button onclick="cadastro()">Cadastrar</button>    
+</body>
+</html>
+
+<script>
+    function cadastro() {
+        let cidade = ipt_Cidade.value;
+        let anoNasc = Number(ipt_Ano.value);
+        
+        alert("Você nasceu na cidade de " + cidade + " em " + anoNasc);
+    
+        // Comando para limpar o Input
+        ipt_Cidade.value = "";
+        ipt_Ano.value = "";
+        
+    }
+</script>
