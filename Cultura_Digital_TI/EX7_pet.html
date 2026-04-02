@@ -1,0 +1,37 @@
+<!-- 
+Nome: Gabryel da Silva Moura.
+RA: 03261048.
+Turma: 1SIS.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PET</title>
+</head>
+
+<body>
+    <h3>Digite o nome do seu Pet: </h3>
+    <input type="text" id="ipt_Nome">
+
+    <h3>Digite a espécie do seu Pet: </h3>
+    <input type="text" id="ipt_Raca">
+    
+    <button onclick="indentificar()">Indentificar PET</button>
+</body>
+</html>
+
+<script>
+    function indentificar(){
+        let nome = ipt_Nome.value;
+        let raca = ipt_Raca.value;
+        
+        alert("O seu pet se chama "+ nome +" e ele é um " + raca);
+        
+        // Comandos usado para limpar os Inputs
+        ipt_Nome.value = "";
+        ipt_Raca.value = "";
+    }
+</script>
