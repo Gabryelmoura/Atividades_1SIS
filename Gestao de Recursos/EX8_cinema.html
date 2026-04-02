@@ -1,0 +1,37 @@
+<!-- 
+Nome: Gabryel da Silva Moura.
+RA: 03261048.
+Turma: 1SIS.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema</title>
+</head>
+
+<body>
+    <h3>Digite o nome do filme: </h3>
+    <input type="text" id="ipt_Filme">
+
+    <h3>Digite o horario do filme: </h3>
+    <input type="number" id="ipt_Hora">
+    
+    <button onclick="confirmar()">Confirmar Ingresso</button>
+</body>
+</html>
+
+<script>
+    function confirmar(){
+        let filme = ipt_Filme.value;
+        let hora = Number(ipt_Hora.value);
+        
+        alert("Ingresso confirmado para o filme "+ filme +" no horário "+ hora);
+    
+        // Comando usado para limpar os inputs
+        ipt_Filme.value = "";
+        ipt_Hora.value = "";
+    }
+</script>
